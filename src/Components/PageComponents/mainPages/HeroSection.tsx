@@ -24,8 +24,10 @@ export default function HeroSection() {
               Independent Investment Intelligence
             </p>
             {/* Description */}
-            <p className="mt-[30px] max-w-xl text-[#ECF4FD] text-[20px] font-normal leading-[26px] tracking-[0.8px]
-">
+            <p
+              className="mt-[30px] max-w-xl text-[#ECF4FD] text-[20px] font-normal leading-[26px] tracking-[0.8px]
+"
+            >
               Your independent investment data management and distribution
               platform. Access institutional-grade research, earnings
               intelligence, and market insights—all in one place.
@@ -42,8 +44,9 @@ export default function HeroSection() {
               </button>
             </div>
           </div>
-          <div className="w-[45%]  flex justify-end">
-            <img src="https://i.ibb.co.com/zTnwcgzP/DESIGN.png" alt="" />
+          <div className="w-[45%]  flex justify-end bg-blend-screen mix-blend-screen">
+            <div className="w-[336px] h-[313px] absolute bg-[radial-gradient(50%_50%_at_50%_50%,#FFF_9%,#5BB9FF_29%,#507ADB_38%,#4970C9_42%,#304982_58%,#1B294A_72%,#0C1322_84%,#030509_94%,#000_100%)] bg-blend-screen mix-blend-screen top-1/2 -translate-y-1/2"></div>
+            <img src="/hero-temp.png" alt="hero-temp" />
           </div>
         </div>
       </div>

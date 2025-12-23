@@ -9,8 +9,6 @@ const Page = () => {
 
 <HeroSection/>
 <PlatformSection/>
-
-
     </main>
   );
 };
