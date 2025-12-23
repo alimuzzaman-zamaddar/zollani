@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* Default body font */
+body {
+  font-family: var(--font-koho);
+}
+
+/* Explicit font classes */
+.font-koho {
+  font-family: var(--font-koho);
+}
+
+.font-integral-cf {
+  font-family: var(--font-integral-cf);
+}
+
+/* Optional helpers */
+.section_title {
+  @apply text-xl;
+}
+
+.section_description {
+  @apply text-base;
+}
