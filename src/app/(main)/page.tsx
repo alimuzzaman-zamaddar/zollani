@@ -5,10 +5,7 @@ import { BsShieldCheck } from "react-icons/bs";
 const Page = () => {
   return (
     <main className="">
-
-<HeroSection/>
-
-
+      <HeroSection />
     </main>
   );
 };
