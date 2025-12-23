@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
 /* Default body font */
+
+@theme {
+  --color-bg-primary: #E9E9E4;
+}
+
 body {
   font-family: var(--font-koho);
 }
