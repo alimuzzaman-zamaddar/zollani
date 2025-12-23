@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Toaster } from "react-hot-toast";
-import { KoHo } from "next/font/google";
+import { KoHo, Montserrat } from "next/font/google";
 import localFont from "next/font/local"; 
 
 import AosProvider from "@/Provider/AosProvider/AosProvider";
@@ -12,6 +12,12 @@ const koho = KoHo({
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700"],
   variable: "--font-koho",
+  display: "swap",
+});
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   display: "swap",
 });
 
@@ -65,7 +71,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${koho.variable} ${integralCF.variable}`} 
+      className={` ${montserrat.variable} ${koho.variable} ${integralCF.variable}`} 
     >
       <body className="font-koho antialiased">
         <QueryProvider>

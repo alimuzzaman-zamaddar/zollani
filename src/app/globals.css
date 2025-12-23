@@ -4,6 +4,7 @@
 
 @theme {
   --color-bg-primary: #E9E9E4;
+    --font-montserrat: var(--font-montserrat);
 }
 
 body {
