@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -8,14 +7,30 @@ import { FiSearch } from "react-icons/fi";
 export default function EarningsSearchPage() {
   const [activeTicker, setActiveTicker] = useState("AAPL");
 
-  const tickers = ["AAPL", "MSFT", "GOOGL", "AMZN", "NVDA", "TSLA", "META", "NFLX"];
+  const tickers = [
+    "AAPL",
+    "MSFT",
+    "GOOGL",
+    "AMZN",
+    "NVDA",
+    "TSLA",
+    "META",
+    "NFLX",
+  ];
 
   return (
     <div className="h-[92.8vh] bg-[#EFEDE7]">
       <Container>
-        <div className="py-16 flex flex-col lg:flex-row gap-16 xl:gap-24 items-center">
+        <div className="py-16 flex flex-col lg:flex-row  items-center">
           {/* LEFT */}
-          <div className=" xl:w-[45%]">
+          <div
+            className="
+    xl:w-[50%]
+    bg-[url('https://i.ibb.co.com/mrPb87rV/380063456-26b18f4b-316c-41b1-80ae-a66c3e13b029-1.png')]
+    bg-no-repeat
+    bg-contain
+    bg-bottom"
+          >
             <h1 className="text-[#031226] font-montserrat text-[24px] sm:text-[44px] xl:text-[56px] font-extrabold tracking-[6px]">
               ZOLLANI.COM
             </h1>
@@ -39,45 +54,51 @@ export default function EarningsSearchPage() {
             <button className="mt-6 w-full max-w-md bg-[#9BCDBD] text-white py-3 rounded-full font-koho tracking-[2px] font-semibold hover:opacity-90 transition cursor-pointer">
               Search Stock
             </button>
+            <img
+              className="w-full"
+              src="https://i.ibb.co.com/mrPb87rV/380063456-26b18f4b-316c-41b1-80ae-a66c3e13b029-1.png"
+              alt=""
+            />
           </div>
-<div className="xl:w-[10%] gap-7 hidden xl:flex flex-col items-center">
-  <div className="w-[2px] bg-[#C2C2C2] h-[320px]"></div>
-  <div className="w-[2px] bg-[#C2C2C2] h-[320px]"></div>
-</div>
-{/* RIGHT */}
-<div className="relative xl:w-[45%]">
-  <p className="text-[#707070] font-koho text-sm tracking-[2px] text-center xl:text-left">
-    Enter a ticker above to see upcoming earnings data
-  </p>
+          {/* DIVIDER */}
+          <div className=" gap-7 hidden xl:flex flex-col items-center">
+            <div className="w-[2px] bg-[#C2C2C2] h-[320px]"></div>
+            <div className="w-[2px] bg-[#C2C2C2] h-[320px]"></div>
+          </div>
+          {/* RIGHT */}
+          <div className="relative xl:w-[50%] pl-8">
+            <p className="text-[#707070] font-koho text-sm tracking-[2px] text-center xl:text-left">
+              Enter a ticker above to see upcoming earnings data
+            </p>
 
-  <p className="mt-2 text-[#707070] font-koho text-sm tracking-[2px] text-center xl:text-left">
-    Try one of these popular tickers:
-  </p>
+            <p className="mt-2 text-[#707070] font-koho text-sm tracking-[2px] text-center xl:text-left">
+              Try one of these popular tickers:
+            </p>
 
-  <span className="absolute right-0 top-0 text-[#031226] text-xs tracking-[2px] cursor-pointer hidden xl:block">
-    See more →
-  </span>
+            <span className="absolute right-0 top-0 text-[#031226] text-xs tracking-[2px] cursor-pointer hidden xl:block">
+              See more →
+            </span>
 
-  {/* FLEX TICKER LIST */}
-  <div className="mt-10 flex flex-wrap gap-6 max-w-lg mx-auto xl:mx-0">
-    {tickers.map((ticker) => {
-      const isActive = activeTicker === ticker;
-      return (
-        <button
-          key={ticker}
-          onClick={() => setActiveTicker(ticker)}
-          className={`w-[100px] h-[90px] rounded-2xl border font-montserrat font-bold tracking-[2px] text-sm transition cursor-pointer ${
-            isActive
-              ? "bg-[#FFB29A] text-white border-[#FFB29A]"
-              : "border-[#707070] text-[#031226] hover:bg-white"
-          }`}
-        >
-          {ticker}
-        </button>
-      );
-    })}
-  </div>
-</div>
+            {/* FLEX TICKER LIST */}
+            <div className="mt-10 flex flex-wrap gap-6 max-w-lg mx-auto xl:mx-0">
+              {tickers.map((ticker) => {
+                const isActive = activeTicker === ticker;
+                return (
+                  <button
+                    key={ticker}
+                    onClick={() => setActiveTicker(ticker)}
+                    className={`w-[100px] h-[90px] rounded-2xl border font-montserrat font-bold tracking-[2px] text-sm transition cursor-pointer ${
+                      isActive
+                        ? "bg-[#FFB29A] text-white border-[#FFB29A]"
+                        : "border-[#707070] text-[#031226] hover:bg-white"
+                    }`}
+                  >
+                    {ticker}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </Container>
     </div>
