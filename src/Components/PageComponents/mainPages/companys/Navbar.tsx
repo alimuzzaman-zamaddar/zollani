@@ -10,10 +10,10 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const navItems = [
-    { label: "Search", href: "/search" },
-    { label: "Top 20", href: "/top-20" },
-    { label: "Calendar", href: "/calendar" },
-    { label: "Wishlist", href: "/wishlist" },
+    { label: "Search", href: "/companys" },
+    { label: "Top 20", href: "/companys/top20" },
+    { label: "Calendar", href: "/companys/calendar" },
+    { label: "Wishlist", href: "/companys/wishlist" },
   ];
 
   return (
@@ -21,9 +21,11 @@ export default function Navbar() {
       <nav className="w-full h-16 bg-[#4D918F] flex items-center justify-between px-6 xl:px-12">
         <div className="w-[1200px] mx-auto flex items-center justify-between">
           {/* LEFT */}
-          <div className="text-white font-semibold tracking-widest text-sm cursor-pointer">
-            ZOLLANI.COM
-          </div>
+          <Link href="/companys">
+            <div className="text-white font-semibold tracking-widest text-sm cursor-pointer">
+              ZOLLANI.COM
+            </div>
+          </Link>
           <div className="hidden md:flex items-center gap-8 text-white text-sm tracking-[2px]">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
