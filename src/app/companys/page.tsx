@@ -19,79 +19,91 @@ export default function EarningsSearchPage() {
   ];
 
   return (
-    <div className="h-[92.8vh] bg-[#EFEDE7]">
+    <div className="bg-[#EFEDE7] xl:h-[92.8vh]">
       <Container>
-        <div className="py-16 flex flex-col lg:flex-row  items-center">
+        <div className="flex flex-col lg:flex-row py-10 sm:py-14 xl:py-16 gap-12 xl:gap-0">
           {/* LEFT */}
           <div
             className="
-    xl:w-[50%]
-    bg-[url('https://i.ibb.co.com/mrPb87rV/380063456-26b18f4b-316c-41b1-80ae-a66c3e13b029-1.png')]
-    bg-no-repeat
-    bg-contain
-    bg-bottom"
+              flex-1
+              bg-[url('https://i.ibb.co.com/mrPb87rV/380063456-26b18f4b-316c-41b1-80ae-a66c3e13b029-1.png')]
+              bg-no-repeat
+              bg-contain
+              bg-bottom
+             
+            "
           >
-            <h1 className="text-[#031226] font-montserrat text-[24px] sm:text-[44px] xl:text-[56px] font-extrabold tracking-[6px]">
-              ZOLLANI.COM
-            </h1>
+            <div className="mt-10 sm:mt-14 xl:mt-20 flex flex-col items-center xl:items-start ">
+              <h1 className="text-[#031226] font-montserrat font-extrabold tracking-[6px]
+                text-[22px] sm:text-[36px] xl:text-[56px]">
+                ZOLLANI.COM
+              </h1>
 
-            <p className="mt-6 max-w-md text-[#707070] font-koho text-[14px] sm:text-[16px] leading-[28px] tracking-[2px]">
-              Fast, clean earning data for any stock. Search a ticker to see
-              upcoming dates, estimates, and historical results
-            </p>
+              <p className="mt-4 sm:mt-6 max-w-md text-[#707070] font-koho tracking-[2px]
+                text-[14px] sm:text-[16px] leading-[26px] sm:leading-[28px]">
+                Fast, clean earning data for any stock. Search a ticker to see
+                upcoming dates, estimates, and historical results
+              </p>
 
-            {/* Search Input */}
-            <div className="mt-8 flex items-center gap-3 w-full max-w-md border border-[#4D918F] rounded-full px-5 py-3">
-              <FiSearch className="text-[#4D918F]" />
-              <input
-                type="text"
-                placeholder="Search any Ticker (AAPL, MSFT, GOOGL...)"
-                className="w-full bg-transparent outline-none font-koho text-sm tracking-[2px] text-[#031226]"
+              {/* Search */}
+              <div className="mt-6 flex items-center gap-3 w-full max-w-md border border-[#4D918F] rounded-full px-5 py-3">
+                <FiSearch className="text-[#4D918F]" />
+                <input
+                  type="text"
+                  placeholder="Search any Ticker (AAPL, MSFT, GOOGL...)"
+                  className="w-full bg-transparent outline-none font-koho text-sm tracking-[2px] text-[#031226]"
+                />
+              </div>
+
+              <button className="mt-5 w-full max-w-md bg-[#9BCDBD] text-white py-3 rounded-full font-koho tracking-[2px] font-semibold hover:opacity-90 transition">
+                Search Stock
+              </button>
+
+              {/* Image only for mobile & tablet */}
+              <img
+                className="mt-8 w-full xl:hidden"
+                src="https://i.ibb.co.com/mrPb87rV/380063456-26b18f4b-316c-41b1-80ae-a66c3e13b029-1.png"
+                alt=""
               />
             </div>
+          </div>
 
-            {/* Button */}
-            <button className="mt-6 w-full max-w-md bg-[#9BCDBD] text-white py-3 rounded-full font-koho tracking-[2px] font-semibold hover:opacity-90 transition cursor-pointer">
-              Search Stock
-            </button>
-            <img
-              className="w-full"
-              src="https://i.ibb.co.com/mrPb87rV/380063456-26b18f4b-316c-41b1-80ae-a66c3e13b029-1.png"
-              alt=""
-            />
+          {/* DIVIDER (XL ONLY) */}
+          <div className="hidden xl:flex flex-col items-center gap-7">
+            <div className="w-[2px] h-[320px] bg-[#C2C2C2]" />
+            <div className="w-[2px] h-[320px] bg-[#C2C2C2]" />
           </div>
-          {/* DIVIDER */}
-          <div className=" gap-7 hidden xl:flex flex-col items-center">
-            <div className="w-[2px] bg-[#C2C2C2] h-[320px]"></div>
-            <div className="w-[2px] bg-[#C2C2C2] h-[320px]"></div>
-          </div>
+
           {/* RIGHT */}
-          <div className="relative xl:w-[50%] pl-8">
-            <p className="text-[#707070] font-koho text-sm tracking-[2px] text-center xl:text-left">
-              Enter a ticker above to see upcoming earnings data
+          <div className="flex-1 xl:w-[60%] mt-6 sm:mt-10 xl:mt-20 px-0 xl:pl-8">
+            <p className="text-[#707070] font-koho font-bold tracking-[2px]
+              text-base sm:text-lg leading-[28px] sm:leading-[30px] text-center">
+              Enter a ticker above to see upcoming earnings <br className="hidden sm:block" />
+              data
             </p>
 
-            <p className="mt-2 text-[#707070] font-koho text-sm tracking-[2px] text-center xl:text-left">
+            <p className="mt-2 text-[#707070] font-koho tracking-[2px]
+              text-base sm:text-lg text-center mb-8 sm:mb-10">
               Try one of these popular tickers:
             </p>
 
-            <span className="absolute right-0 top-0 text-[#031226] text-xs tracking-[2px] cursor-pointer hidden xl:block">
+            <span className="hidden xl:block text-right text-[#031226] text-xs tracking-[2px] cursor-pointer">
               See more →
             </span>
 
-            {/* FLEX TICKER LIST */}
-            <div className="mt-10 flex flex-wrap gap-6 max-w-lg mx-auto xl:mx-0">
+            <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 mt-4">
               {tickers.map((ticker) => {
                 const isActive = activeTicker === ticker;
                 return (
                   <button
                     key={ticker}
                     onClick={() => setActiveTicker(ticker)}
-                    className={`w-[100px] h-[90px] rounded-2xl border font-montserrat font-bold tracking-[2px] text-sm transition cursor-pointer ${
-                      isActive
-                        ? "bg-[#FFB29A] text-white border-[#FFB29A]"
-                        : "border-[#707070] text-[#031226] hover:bg-white"
-                    }`}
+                    className={`h-[96px] sm:h-[110px] xl:h-[128px] rounded-2xl border font-semibold tracking-[2px] text-base sm:text-lg transition
+                      ${
+                        isActive
+                          ? "bg-[#FFB29A] text-white border-[#FFB29A]"
+                          : "border-[#707070] text-[#031226] hover:bg-white"
+                      }`}
                   >
                     {ticker}
                   </button>
