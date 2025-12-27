@@ -1,11 +1,12 @@
 "use client";
 
 import Container from "@/Components/Common/Container";
-
+import { useRouter } from "next/navigation";
 export default function PasswordChangedPage() {
+  const router = useRouter();
   const handleLoginNow = () => {
     console.log("Log in now");
-    // router.push("/login") later
+      router.push('/auth/login')
   };
 
   return (

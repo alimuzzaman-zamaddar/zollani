@@ -5,15 +5,19 @@ import { useState } from "react";
 import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
 import { LockSvg, MailSvg, UserSvg } from "@/Components/Svg/SvgContainer";
 import Container from "@/Components/Common/Container";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function SignUpPage() {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const password = watch("password");
+    const router = useRouter()
 
   const onSubmit = (data: any) => {
     console.log(data);
+      router.push('/auth/sendOtp')
   };
 
   return (
@@ -21,7 +25,7 @@ export default function SignUpPage() {
       <Container>
         <div className="py-12 xl:py-20 h-screen xl:h-[90vh] flex flex-col xl:flex-row justify-center gap-16 md:gap-24 xl:gap-[180px] items-center">
           {/* LEFT */}
-          <div className="px-4 sm:px-0">
+          <div className="px-4 sm:px-0 mt-40 xl:mt-0">
             <h1 className="text-[#031226] text-center font-montserrat font-extrabold tracking-[4px] text-[32px] sm:text-[40px] md:text-[46px] xl:text-[50px] leading-[48px] sm:leading-[70px] xl:leading-[100px]">
               Welcome
             </h1>
@@ -48,7 +52,9 @@ export default function SignUpPage() {
 
             <p className="mt-2 text-[#707070] text-center font-koho text-[14px] sm:text-[16px] md:text-[18px] font-normal leading-[22px] sm:leading-[26px] md:leading-[30px] tracking-[2px]">
               Already have an account?
-              <span className="text-[#4D918F] font-medium cursor-pointer ml-1">Sign in</span>
+             <Link href="/auth/login">
+               <span className="text-[#4D918F] font-medium cursor-pointer ml-1">Sign in</span>
+             </Link>
             </p>
 
             <form onSubmit={handleSubmit(onSubmit)} className="mt-8 space-y-6 w-full">

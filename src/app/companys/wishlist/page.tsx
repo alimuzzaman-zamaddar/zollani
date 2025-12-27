@@ -1,10 +1,10 @@
-import { DeleteSvg, StarSvg } from "@/Components/Svg/SvgContainer";
+import { DeleteSvg, StarOrSvg } from "@/Components/Svg/SvgContainer";
 
 const WatchlistCard = () => {
   return (
     <div
       className="
-        relative w-64 rounded-[6px] border border-[#8EC3B3] px-5 py-2.5
+        relative w-full md:w-64 rounded-md border border-[#8EC3B3] px-5 py-2.5
         transition-all duration-200
         hover:bg-[#8EC3B3] hover:text-white
         group
@@ -23,8 +23,8 @@ const WatchlistCard = () => {
       {/* Symbol + star */}
       <div className="flex items-center gap-2">
         <span className="text-[22px] font-bold tracking-wide">AAPL</span>
-        <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#FFB199] text-xs text-black">
-          <StarSvg />
+        <span >
+          <StarOrSvg />
         </span>
       </div>
 
@@ -42,7 +42,6 @@ const WatchlistCard = () => {
 const MyWatchlist = () => {
   return (
     <div className="min-h-screen bg-[#EFEDE8] px-10 py-14">
-      {/* Header */}
       <div className="text-center">
         <h1 className="flex items-center justify-center gap-2 text-xl font-semibold">
           My Watchlist <span className="text-blue-800">★</span>
@@ -51,9 +50,7 @@ const MyWatchlist = () => {
           Track your favorite stocks and their upcoming earnings
         </p>
       </div>
-
-      {/* Cards */}
-      <div className="mx-auto mt-12 flex max-w-6xl gap-6">
+      <div className="mx-auto mt-12 flex flex-wrap xl:max-w-6xl  gap-6">
         {Array.from({ length: 4 }).map((_, i) => (
           <WatchlistCard key={i} />
         ))}

@@ -63,6 +63,16 @@ line-height: 12px; /* 250% */
 letter-spacing: 0.48px;
 text-transform: uppercase;
 }
+
+@media (max-width: 640px) {
+  .explore-btn {
+    padding: 4px 10px;
+    font-size: 10px;
+    line-height: 10px;
+    letter-spacing: 0.3px;
+    border-radius: 8px;
+  }
+}
         .calendar-wrapper .react-calendar {
           background: transparent;
           border: none;

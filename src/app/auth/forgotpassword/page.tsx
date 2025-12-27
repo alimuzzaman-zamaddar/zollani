@@ -3,12 +3,15 @@
 import { useForm } from "react-hook-form";
 import Container from "@/Components/Common/Container";
 import { MailSvg } from "@/Components/Svg/SvgContainer";
+import { useRouter } from "next/navigation";
 
 export default function ForgotPasswordPage() {
   const { register, handleSubmit } = useForm();
+    const router = useRouter()
 
   const onSubmit = (data: any) => {
     console.log(data);
+      router.push('/auth/emailverify')
   };
 
   return (

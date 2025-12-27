@@ -5,15 +5,18 @@ import { useState } from "react";
 import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
 import { LockSvg } from "@/Components/Svg/SvgContainer";
 import Container from "@/Components/Common/Container";
+import { useRouter } from "next/navigation";
 
 export default function ResetPasswordPage() {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const password = watch("password");
+    const router = useRouter()
 
   const onSubmit = (data: any) => {
     console.log(data);
+      router.push('/auth/passwordchanged')
   };
 
   return (

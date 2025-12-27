@@ -2,6 +2,7 @@
 
 import { useForm } from "react-hook-form";
 import Container from "@/Components/Common/Container";
+import { useRouter } from "next/navigation";
 
 export default function VerifyOtpPage() {
   const {
@@ -9,9 +10,11 @@ export default function VerifyOtpPage() {
     handleSubmit,
     formState: { errors },
   } = useForm();
+    const router = useRouter()
 
   const onSubmit = (data: any) => {
     console.log(data);
+      router.push('/auth/varifyedOtp')
   };
 
   return (

@@ -8,8 +8,8 @@ export default function WhyChooseSecion() {
     <section className="relative w-full py-10 overflow-hidden bg-bg-primary">
       <Container>
         <div className="">
-          <div className="flex  gap-10 items-center">
-            <div className="w-full grid grid-cols-1 md:grid-cols-2  gap-4">
+          <div className="flex flex-col-reverse xl:flex-row gap-10 items-center">
+            <div className="w-full grid grid-cols-1 sm:grid-cols-2  gap-4">
               <div className="w-full ">
                 <div className="relative">
                   <Image className="w-full h-full" src={bgimage} alt="" />
@@ -112,7 +112,7 @@ export default function WhyChooseSecion() {
               </button>
 
               {/* Heading */}
-              <h2 className="text-[#031226] font-integral-cf text-[30px] font-normal leading-[60px] tracking-[1.2px]">
+              <h2 className="text-[#031226] font-integral-cf text-2xl xl:text-[30px] font-normal xl:leading-[60px] tracking-[1.2px]">
                 What Makes Our Platform the Right Choice for You
                 SUITE
               </h2>

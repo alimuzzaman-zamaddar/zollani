@@ -4,18 +4,18 @@ import { SearchBlackSvg } from "@/Components/Svg/SvgContainer";
 export default function HeroSection() {
   return (
     <section
-      className="relative w-full h-[70vh] flex items-center bg-cover bg-center"
+      className="relative w-full py-10 md:py-0 md:h-[70vh] flex items-center bg-cover bg-center"
       style={{
         backgroundImage: "url('https://i.ibb.co.com/DPKhZfjC/Group-1-1.png')",
       }}
     >
-      <div className="w-[1200px] mx-auto">
-        <div className="flex justify-between items-center w-full">
-          <div className="w-[55%]">
+      <div className="px-7 xl:px-0 lg:w-300 mx-auto">
+        <div className="flex flex-col-reverse md:flex-row justify-between items-center w-full gap-7 md:gap-0">
+          <div className="md:w-[55%]">
             {/* Badge */}
 
             {/* Heading */}
-            <h1 className="text-[#ECF4FD] font-integral-cf text-[50px] font-medium leading-[60px] tracking-[2px]">
+            <h1 className="text-[#ECF4FD] font-integral-cf text-2xl md:text-3xl lg:text-[38px] xl:text-[50px] font-medium lg:leading-10 xl:leading-15 tracking-[2px]">
               SMARTER INVESTING <br />
               FOR <br />
               RETAIL INVESTORS
@@ -44,8 +44,12 @@ export default function HeroSection() {
               </button>
             </div>
           </div>
-          <div className="w-[45%]  flex justify-end bg-blend-screen mix-blend-screen">
-            <div className="w-[336px] h-[313px] absolute bg-[radial-gradient(50%_50%_at_50%_50%,#FFF_9%,#5BB9FF_29%,#507ADB_38%,#4970C9_42%,#304982_58%,#1B294A_72%,#0C1322_84%,#030509_94%,#000_100%)] bg-blend-screen mix-blend-screen top-1/2 -translate-y-1/2"></div>
+          <div className=" hidden md:w-[45%]  md:flex justify-end bg-blend-screen mix-blend-screen">
+            <div className=" w-84 h-[313px] absolute bg-[radial-gradient(50%_50%_at_50%_50%,#FFF_9%,#5BB9FF_29%,#507ADB_38%,#4970C9_42%,#304982_58%,#1B294A_72%,#0C1322_84%,#030509_94%,#000_100%)] bg-blend-screen mix-blend-screen top-1/2 -translate-y-1/2"></div>
+            <img src="/hero-temp.png" alt="hero-temp" />
+          </div>
+          <div className=" md:hidden md:w-[45%]  flex justify-end bg-blend-screen mix-blend-screen">
+            <div className="w-84 h-[313px] absolute bg-[radial-gradient(50%_50%_at_50%_50%,#FFF_9%,#5BB9FF_29%,#507ADB_38%,#4970C9_42%,#304982_58%,#1B294A_72%,#0C1322_84%,#030509_94%,#000_100%)] bg-blend-screen mix-blend-screen top-48 sm:top-55 -translate-y-1/2"></div>
             <img src="/hero-temp.png" alt="hero-temp" />
           </div>
         </div>

@@ -1,14 +1,17 @@
 "use client";
 
 import Container from "@/Components/Common/Container";
+import { useRouter } from "next/navigation";
 
 export default function CheckEmailPage() {
   const handleOpenInbox = () => {
     console.log("Open email inbox");
+          router.push('/auth/resetpassword')
   };
-
+    const router = useRouter()
   const handleResend = () => {
     console.log("Resend email");
+
   };
 
   return (
