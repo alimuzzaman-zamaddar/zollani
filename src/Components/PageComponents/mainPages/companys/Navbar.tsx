@@ -45,6 +45,7 @@ export default function Navbar() {
               );
             })}
           </div>
+<Link href="/companys/profile">
           <div className="hidden md:flex items-center gap-3 cursor-pointer">
             <span className="text-white text-sm tracking-[2px]">
               softy hijabi
@@ -55,6 +56,7 @@ export default function Navbar() {
               className="w-8 h-8 rounded-full"
             />
           </div>
+</Link>
 
           <button
             onClick={() => setOpen(true)}
@@ -108,6 +110,7 @@ export default function Navbar() {
             );
           })}
         </div>
+        <Link href="/companys/profile">
         <div className="absolute bottom-6 left-6 flex items-center gap-3 cursor-pointer">
           <img
             src="https://i.pravatar.cc/40"
@@ -118,6 +121,7 @@ export default function Navbar() {
             softy hijabi
           </span>
         </div>
+        </Link>
       </div>
     </>
   );

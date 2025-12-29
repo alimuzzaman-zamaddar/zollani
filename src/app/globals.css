@@ -116,3 +116,5 @@ text-transform: uppercase;
   scrollbar-width: thin;
   scrollbar-color: #F5907B #E0E0E0;
 }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
