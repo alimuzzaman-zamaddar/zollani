@@ -38,7 +38,7 @@ export default function EarningsHistorySection() {
     >
       <section className="w-full py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-0">
-          <div className="bg-[rgba(255,255,255,0.30)] rounded-2xl px-4 sm:px-8 xl:px-10 py-8 sm:py-10">
+          <div className="bg-[rgba(255,255,255,0.50)] rounded-2xl px-4 sm:px-8 xl:px-10 py-8 sm:py-10">
             {/* HEADER */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <h2 className="text-[#031226] font-montserrat text-[16px] sm:text-[18px] xl:text-[20px] font-bold tracking-[2px]">

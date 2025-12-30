@@ -62,7 +62,7 @@ export default function WhatToWatchSection() {
       >
         <section className="w-full  pt-4 pb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-0">
-            <div className="relative mt-10 rounded-2xl bg-white/30 border border-white/40 backdrop-blur-sm p-6 sm:p-8 overflow-hidden">
+            <div className="relative mt-10 rounded-2xl bg-[rgba(255,255,255,0.50)] border border-white/40 backdrop-blur-sm p-6 sm:p-8 overflow-hidden">
               <div className="relative">
                 <div
                   onClick={() => setOpen(!open)}
@@ -116,7 +116,7 @@ export default function WhatToWatchSection() {
                 )}
               </div>
             </div>
-            <div className="relative mt-10 rounded-2xl bg-white/30 border border-white/40 backdrop-blur-sm p-6 sm:p-8 overflow-hidden">
+            <div className="relative mt-10 rounded-2xl bg-[rgba(255,255,255,0.50)] border border-white/40 backdrop-blur-sm p-6 sm:p-8 overflow-hidden">
               <div className="relative">
                 <div
                   onClick={() => setOpen(!open)}

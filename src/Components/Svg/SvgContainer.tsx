@@ -205,3 +205,94 @@ export function PlusMinusSvg() {
 
   );
 }
+export function BoxSvg() {
+  return (
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M9 15C9 12.1716 9 10.7574 9.87868 9.87868C10.7574 9 12.1716 9 15 9H16C18.8284 9 20.2426 9 21.1213 9.87868C22 10.7574 22 12.1716 22 15V16C22 18.8284 22 20.2426 21.1213 21.1213C20.2426 22 18.8284 22 16 22H15C12.1716 22 10.7574 22 9.87868 21.1213C9 20.2426 9 18.8284 9 16V15Z" stroke="#031226" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M16.9999 9C16.9975 6.04291 16.9528 4.51121 16.092 3.46243C15.9258 3.25989 15.7401 3.07418 15.5376 2.90796C14.4312 2 12.7875 2 9.5 2C6.21252 2 4.56878 2 3.46243 2.90796C3.25989 3.07417 3.07418 3.25989 2.90796 3.46243C2 4.56878 2 6.21252 2 9.5C2 12.7875 2 14.4312 2.90796 15.5376C3.07417 15.7401 3.25989 15.9258 3.46243 16.092C4.51121 16.9528 6.04291 16.9975 9 16.9999" stroke="#031226" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+  );
+}
+export function CrossSvg() {
+  return (
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M12 21.5C16.4783 21.5 18.7175 21.5 20.1088 20.1088C21.5 18.7175 21.5 16.4783 21.5 12C21.5 7.52165 21.5 5.28248 20.1088 3.89124C18.7175 2.5 16.4783 2.5 12 2.5C7.52166 2.5 5.28249 2.5 3.89124 3.89124C2.5 5.28249 2.5 7.52166 2.5 12C2.5 16.4783 2.5 18.7175 3.89124 20.1088C5.28248 21.5 7.52165 21.5 12 21.5Z" stroke="#031226" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M15 9L9 14.9996M15 15L9 9.00039" stroke="#031226" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+  );
+}
+export function CrossRed() {
+  return (
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+  <path d="M33 18C33 9.71572 26.2842 3 18 3C9.71572 3 3 9.71572 3 18C3 26.2842 9.71572 33 18 33C26.2842 33 33 26.2842 33 18Z" stroke="#CC2A14" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M22.4991 22.5L13.5 13.5M13.501 22.5L22.5 13.5" stroke="#CC2A14" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+  );
+}
+export function BOX() {
+  return (
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+  <path d="M6.47703 29.523C4.5 27.546 4.5 24.3639 4.5 18C4.5 11.636 4.5 8.45406 6.47703 6.47703C8.45406 4.5 11.636 4.5 18 4.5C24.3639 4.5 27.546 4.5 29.523 6.47703C31.5 8.45406 31.5 11.636 31.5 18C31.5 24.3639 31.5 27.546 29.523 29.523C27.546 31.5 24.3639 31.5 18 31.5C11.636 31.5 8.45406 31.5 6.47703 29.523Z" stroke="#031226" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M10.5 21L14.6893 16.8106C15.2751 16.2249 16.2249 16.2249 16.8106 16.8106L19.1894 19.1894C19.7751 19.7751 20.7249 19.7751 21.3106 19.1894L25.5 15" stroke="#031226" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+  );
+}
+export function X() {
+  return (
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M18 6L6.00081 17.9992M17.9992 18L6 6.00085" stroke="#031226" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+  );
+}
+export function Check() {
+  return (
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M5 14.5C5 14.5 6.5 14.5 8.5 18C8.5 18 14.0588 8.83333 19 7" stroke="#4D918F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+  );
+}
+export function LockSvgg() {
+  return (
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+  <path d="M23.0925 32.8513C20.9754 32.949 18.8247 33 16.4563 33C14.0879 33 11.9372 32.949 9.82005 32.8513C7.30395 32.7352 5.23635 30.7725 4.90026 28.267C4.68091 26.632 4.5 24.9564 4.5 23.25C4.5 21.5436 4.6809 19.868 4.90026 18.233C5.23635 15.7275 7.30395 13.7647 9.82005 13.6486C11.9372 13.551 14.0879 13.5 16.4563 13.5C18.8247 13.5 20.9754 13.551 23.0925 13.6486C24.6818 13.722 26.0919 14.5319 27 15.75" stroke="#031226" stroke-width="2.25" stroke-linecap="round"/>
+  <path d="M25.5 22.467C25.5 20.8284 26.8431 19.5 28.5 19.5C30.1569 19.5 31.5 20.8284 31.5 22.467C31.5 23.0577 31.3255 23.608 31.0246 24.0703C30.1281 25.4484 28.5 26.7624 28.5 28.4011V29.1429M28.5 33H28.518" stroke="#031226" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M9.75 13.5V9.75C9.75 6.02208 12.7721 3 16.5 3C20.228 3 23.25 6.02208 23.25 9.75V13.5" stroke="#031226" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M18 23.2354V23.2504" stroke="#031226" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12 23.2354V23.2504" stroke="#031226" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+  );
+}
+export function CameraSvg() {
+  return (
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path d="M11.6645 3.33398C11.9652 3.33398 12.2602 3.41531 12.5184 3.56935C12.7766 3.72339 12.9883 3.94441 13.1312 4.20898L13.5362 4.95898C13.679 5.22356 13.8907 5.44458 14.1489 5.59862C14.4071 5.75266 14.7022 5.83399 15.0028 5.83398H16.667C17.109 5.83398 17.5329 6.00958 17.8455 6.32214C18.1581 6.6347 18.3337 7.05862 18.3337 7.50065V15.0007C18.3337 15.4427 18.1581 15.8666 17.8455 16.1792C17.5329 16.4917 17.109 16.6673 16.667 16.6673H3.33366C2.89163 16.6673 2.46771 16.4917 2.15515 16.1792C1.84259 15.8666 1.66699 15.4427 1.66699 15.0007V7.50065C1.66699 7.05862 1.84259 6.6347 2.15515 6.32214C2.46771 6.00958 2.89163 5.83398 3.33366 5.83398H4.99783C5.29818 5.834 5.59295 5.75285 5.85098 5.59912C6.109 5.44539 6.32069 5.22479 6.46366 4.96065L6.87116 4.20732C7.01413 3.94318 7.22581 3.72258 7.48384 3.56885C7.74187 3.41512 8.03664 3.33397 8.33699 3.33398H11.6645Z" stroke="#4D918F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M10 13.333C11.3807 13.333 12.5 12.2137 12.5 10.833C12.5 9.4523 11.3807 8.33301 10 8.33301C8.61929 8.33301 7.5 9.4523 7.5 10.833C7.5 12.2137 8.61929 13.333 10 13.333Z" stroke="#4D918F" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+  );
+}
+export function ArrowSvg() {
+  return (
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+  <path d="M9.66698 3.99935C9.63591 3.2704 9.54345 2.80592 9.26865 2.44852C9.16205 2.30984 9.03771 2.18571 8.89871 2.0793C8.35905 1.66602 7.57565 1.66602 6.00889 1.66602H5.67487C3.78555 1.66602 2.84089 1.66602 2.25395 2.2518C1.66702 2.83758 1.66701 3.7804 1.667 5.666L1.66699 10.3327C1.66699 12.2183 1.66698 13.1611 2.25393 13.7469C2.84087 14.3327 3.78553 14.3327 5.67487 14.3327H6.00885C7.57565 14.3327 8.35905 14.3327 8.89871 13.9194C9.03765 13.813 9.16205 13.6889 9.26865 13.5502C9.54345 13.1927 9.63591 12.7282 9.66698 11.9991" stroke="#ECF4FD" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M13.667 7.99928H5.66699M12.0003 10.3327C12.0003 10.3327 14.3336 8.61422 14.3336 7.99935C14.3336 7.38448 12.0003 5.66602 12.0003 5.66602" stroke="#ECF4FD" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+  );
+}
+export function XYSvg() {
+  return (
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z" stroke="#E93820" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14.9994 15L9 9M9.00064 15L15 9" stroke="#E93820" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+  );
+}
