@@ -9,8 +9,8 @@ export default function page() {
   return (
     <div>
       <CompanyHero />
-        <CompanyOverviewSection />
-        <WhatToWatchSection />
+      <CompanyOverviewSection />
+      <WhatToWatchSection />
       <EarningsHistorySection />
     </div>
   );
