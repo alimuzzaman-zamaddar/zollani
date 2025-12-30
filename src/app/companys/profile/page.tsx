@@ -3,24 +3,15 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import Container from "@/Components/Common/Container";
-import {
-  FiMail,
-  FiPhone,
-  FiMapPin,
-  FiCalendar,
-  FiLogOut,
-  FiX,
-} from "react-icons/fi";
+import { FiMail, FiPhone, FiMapPin, FiCalendar } from "react-icons/fi";
 import { FaRegWindowClose } from "react-icons/fa";
 import {
   ArrowSvg,
-  BOX,
   BoxSvg,
   CameraSvg,
   Check,
   CrossRed,
   CrossSvg,
-  LockSvg,
   LockSvgg,
   X,
   XYSvg,
@@ -41,7 +32,6 @@ export default function ProfilePage() {
     setEditMode(false);
   };
   const [isPasswordModalOpen, setIsPasswordModalOpen] = useState(false);
-  // Handle the modal state (open/close)
   const openModal = () => {
     setIsPasswordModalOpen(true);
   };
@@ -51,7 +41,6 @@ export default function ProfilePage() {
   };
 
   const handlePasswordSubmit = (data: any) => {
-    // Validate password matching
     if (data.newPassword !== data.confirmNewPassword) {
       setError("confirmNewPassword", {
         type: "manual",
@@ -76,7 +65,6 @@ export default function ProfilePage() {
     <>
       <div className=" bg-[#EFEDE7] ">
         <div className="bg-white py-5 px-5 xl:px-0">
-          {/* HEADER */}
           <div className="w-full max-w-300 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:w-full mx-auto px-4 sm:px-0">
             <div className="w-full sm:w-auto">
               <h1 className="text-[#031226] text-[24px] sm:text-[26px] font-normal tracking-[2px]">
@@ -94,11 +82,8 @@ export default function ProfilePage() {
         </div>
 
         <Container>
-          {/* PROFILE CARD */}
           <div className="mt-8 bg-[#EFEDE7] rounded-xl p-6 flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
-            {/* LEFT PROFILE INFO */}
             <div className="flex flex-col sm:flex-row sm:items-start gap-6">
-              {/* AVATAR */}
               <div className="relative w-30 h-30">
                 <img
                   src="https://i.pravatar.cc/100"
@@ -109,8 +94,6 @@ export default function ProfilePage() {
                   <CameraSvg />
                 </button>
               </div>
-
-              {/* NAME + DETAILS */}
               <div>
                 <h2 className="text-[#031226] text-[30px] font-bold leading-[32px] ">
                   Softu Hijabi
@@ -141,14 +124,10 @@ export default function ProfilePage() {
                 </div>
               </div>
             </div>
-
-            {/* LOGOUT */}
             <button className="flex items-start justify-center gap-5 px-5 py-3 rounded-md bg-[#F22F2F] text-white strokeWidth text-[12px] font-bold tracking-[2px] cursor-pointer hover:opacity-90 transition">
               <ArrowSvg /> Logout
             </button>
           </div>
-
-          {/* PERSONAL INFORMATION */}
           <div className="mt-10 bg-[#EFEDE7] rounded-xl p-6 md:p-0">
             <div className="flex items-center justify-between">
               <div>
@@ -167,13 +146,10 @@ export default function ProfilePage() {
                 ✎ Edit
               </button>
             </div>
-
-            {/* FORM */}
             <form
               onSubmit={handleSubmit(onSubmit)}
               className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6"
             >
-              {/* Input Field Reusable */}
               {[
                 { label: "First Name", name: "firstName" },
                 { label: "Last Name", name: "lastName" },
@@ -204,8 +180,6 @@ export default function ProfilePage() {
                   />
                 </div>
               ))}
-
-              {/* Buttons */}
               <div className="col-span-1 md:col-span-2 flex flex-col sm:flex-row gap-6 mt-2">
                 <button
                   type="button"
