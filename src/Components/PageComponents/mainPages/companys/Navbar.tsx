@@ -1,5 +1,6 @@
 "use client";
 
+import { useGetUserDataQuery } from "@/redux/slices/authApi";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -8,6 +9,14 @@ import { HiMenuAlt2, HiX } from "react-icons/hi";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+
+  const { data, isLoading, isError } = useGetUserDataQuery(undefined);
+
+  const userName =
+    data?.data?.name || (isLoading ? "Loading..." : isError ? "Guest" : "User");
+
+  const userAvatar =
+    data?.data?.avatar || "https://i.pravatar.cc/40?img=3";
 
   const navItems = [
     { label: "Search", href: "/companys" },
@@ -26,6 +35,7 @@ export default function Navbar() {
               ZOLLANI.COM
             </div>
           </Link>
+
           <div className="hidden md:flex items-center gap-8 text-white text-sm tracking-[2px]">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
@@ -45,18 +55,20 @@ export default function Navbar() {
               );
             })}
           </div>
-<Link href="/companys/profile">
-          <div className="hidden md:flex items-center gap-3 cursor-pointer">
-            <span className="text-white text-sm tracking-[2px]">
-              softy hijabi
-            </span>
-            <img
-              src="https://i.pravatar.cc/32"
-              alt="avatar"
-              className="w-8 h-8 rounded-full"
-            />
-          </div>
-</Link>
+
+          {/* USER */}
+          <Link href="/companys/profile">
+            <div className="hidden md:flex items-center gap-3 cursor-pointer">
+              <span className="text-white text-sm tracking-[2px]">
+                {userName}
+              </span>
+              <img
+                src={userAvatar}
+                alt="avatar"
+                className="w-8 h-8 rounded-full"
+              />
+            </div>
+          </Link>
 
           <button
             onClick={() => setOpen(true)}
@@ -90,6 +102,7 @@ export default function Navbar() {
             <HiX />
           </button>
         </div>
+
         <div className="flex flex-col mt-6 px-6 gap-6 text-white tracking-[2px] text-sm">
           {navItems.map((item) => {
             const isActive = pathname === item.href;
@@ -110,17 +123,16 @@ export default function Navbar() {
             );
           })}
         </div>
+
         <Link href="/companys/profile">
-        <div className="absolute bottom-6 left-6 flex items-center gap-3 cursor-pointer">
-          <img
-            src="https://i.pravatar.cc/40"
-            alt="avatar"
-            className="w-10 h-10 rounded-full"
-          />
-          <span className="text-white text-sm tracking-[2px]">
-            softy hijabi
-          </span>
-        </div>
+          <div className="absolute bottom-6 left-6 flex items-center gap-3 cursor-pointer">
+            <img
+              src={userAvatar}
+              alt="avatar"
+              className="w-10 h-10 rounded-full"
+            />
+            <span className="text-white text-sm tracking-[2px]">{userName}</span>
+          </div>
         </Link>
       </div>
     </>

@@ -1,22 +1,24 @@
 "use client";
 
 import Container from "@/Components/Common/Container";
+import { useRouter } from "next/navigation";
 
 export default function AccountVerifiedPage() {
+  const router = useRouter();
   const handleContinue = () => {
-    console.log("Continue clicked");
+    router.push("/companys");
   };
 
   return (
-    <div className="h-screen xl:h-[90vh] bg-[#EFEDE7]">
+    <div className="min-h-screen xl:h-[90vh] bg-[#EFEDE7]">
       <Container>
-        <div className="py-12 xl:py-20  xl:h-[90vh] flex flex-col xl:flex-row justify-center gap-16 md:gap-24 xl:gap-[180px] items-center">
+        <div className="py-10 sm:py-12 xl:py-20 min-h-screen xl:h-[90vh] flex flex-col xl:flex-row justify-center gap-8 xl:gap-[180px] items-center">
           {/* LEFT IMAGE */}
           <div className="w-full xl:w-[40%] flex justify-center items-center">
             <img
               src="https://i.ibb.co.com/Hmqq9DZ/Layer-1-2.png"
               alt="Account Verified"
-              className="w-full max-w-[260px] sm:max-w-[320px] md:max-w-[380px] xl:max-w-[420px]"
+              className="w-full max-w-[240px] sm:max-w-[320px] md:max-w-[380px] xl:max-w-[420px]"
             />
           </div>
 

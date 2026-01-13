@@ -1,12 +1,9 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Toaster } from "react-hot-toast";
 import { KoHo, Montserrat } from "next/font/google";
-import localFont from "next/font/local"; 
+import localFont from "next/font/local";
 
-import AosProvider from "@/Provider/AosProvider/AosProvider";
-import AuthProvider from "@/Provider/AuthProvider/AuthProvider";
-import QueryProvider from "@/Provider/QueryProvider/QueryProvider";
+import Providers from "./providers";
 
 const koho = KoHo({
   subsets: ["latin"],
@@ -14,6 +11,7 @@ const koho = KoHo({
   variable: "--font-koho",
   display: "swap",
 });
+
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
@@ -71,17 +69,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={` ${montserrat.variable} ${koho.variable} ${integralCF.variable}`} 
+      className={`${montserrat.variable} ${koho.variable} ${integralCF.variable}`}
     >
       <body className="font-koho antialiased">
-        <QueryProvider>
-          <AuthProvider>
-            <AosProvider>
-              <Toaster />
-              {children}
-            </AosProvider>
-          </AuthProvider>
-        </QueryProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
