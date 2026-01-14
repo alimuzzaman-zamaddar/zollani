@@ -63,7 +63,7 @@ export default function Navbar() {
                 {userName}
               </span>
               <img
-                src={userAvatar}
+                src={`${process.env.NEXT_PUBLIC_UPLOAD_BASE_URL}/${userAvatar}`}
                 alt="avatar"
                 className="w-8 h-8 rounded-full"
               />

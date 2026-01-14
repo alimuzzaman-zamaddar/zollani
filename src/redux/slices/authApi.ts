@@ -4,11 +4,6 @@ import { createApi } from "@reduxjs/toolkit/query/react";
 import axiosBaseQuery from "../api/axiosBaseQuery";
 const SiteURl = process.env.NEXT_PUBLIC_SERVER_BASE_URL as string;
 
-
-
-
-
-
 export const authSlice = createApi({
   reducerPath: "authApi",
   baseQuery: axiosBaseQuery({ baseUrl: SiteURl }),
@@ -99,16 +94,16 @@ export const authSlice = createApi({
       }),
     }),
 
-getUserData: builder.query<any, void>({
-  query: () => ({
-    url: "/users/data",
-    method: "GET",
-  }),
-}),
+    getUserData: builder.query<any, void>({
+      query: () => ({
+        url: "/users/data",
+        method: "GET",
+      }),
+    }),
 
     changePassword: builder.mutation<any, FormData>({
       query: (formData) => ({
-        url: "/users/password/change",
+        url: "/users/change-password",
         method: "POST",
         data: formData,
         headers: {
@@ -133,7 +128,7 @@ getUserData: builder.query<any, void>({
       FormData
     >({
       query: (formData) => ({
-        url: "users/data/update",
+        url: "/users/data/update",
         method: "POST",
         data: formData,
         headers: {
@@ -141,10 +136,21 @@ getUserData: builder.query<any, void>({
           Authorization: `Bearer ${localStorage.getItem("token") || ""}`,
         },
       }),
-      invalidatesTags: ["Auth"],
     }),
   }),
 });
 
-
-export const { useRegisterUserMutation, useVerifyOTPMutation, useLoginUserMutation, useResendOTPMutation, useVerifyEmailMutation,useResetPasswordMutation,useSocialLoginUserMutation, useLogoutUserMutation, useGetUserDataQuery, useChangePasswordMutation,useGetSystemSettingsQuery, useUpdateUserDataMutation } = authSlice;
+export const {
+  useRegisterUserMutation,
+  useVerifyOTPMutation,
+  useLoginUserMutation,
+  useResendOTPMutation,
+  useVerifyEmailMutation,
+  useResetPasswordMutation,
+  useSocialLoginUserMutation,
+  useLogoutUserMutation,
+  useGetUserDataQuery,
+  useChangePasswordMutation,
+  useGetSystemSettingsQuery,
+  useUpdateUserDataMutation,
+} = authSlice;

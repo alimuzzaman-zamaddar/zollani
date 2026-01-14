@@ -67,7 +67,7 @@ export default function ResetPasswordPage() {
   };
 
   return (
-    <div className="h-screen xl:h-[90vh] bg-[#EFEDE7]">
+    <div className="h-screen xl:h-[92.8vh] bg-[#EFEDE7]">
       <Container>
         <div className="py-12 xl:py-20 h-screen xl:h-[90vh] flex flex-col xl:flex-row justify-center gap-16 md:gap-24 xl:gap-[180px] items-center">
           {/* LEFT IMAGE */}
